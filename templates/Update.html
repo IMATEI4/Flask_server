@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		</style>
+	</head>
+    <body>
+        {%for col in acc%}
+        <form action = "/{{col.id}}/update" method = "POST">
+            <label for="nume">name:</label><br>
+            <input type<"text" id= "nume" name="nume" value = "{{col.name}}"><br>
+            <label for="author">author:</label><br>
+            <input type<"text" id= "author" name="author" value = "{{col.author}}"><br>
+            <label for="year_of_aparition">year_of_aparition:</label><br>
+            <input type<"text" id= "year_of_aparition" name="year_of_aparition" value = "{{col.year_of_aparition}}"><br>
+            <label for="rating">rating:</label><br>
+            <input type<"text" id= "rating" name="rating" value = "{{col.rating}}"><br>
+            <input type="submit" value="Submit">
+        </form>
+        {%endfor%}
+    </body>
+</html>
